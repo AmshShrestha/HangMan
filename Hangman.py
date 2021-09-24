@@ -130,13 +130,16 @@ def init():
     button_Z = Button(win, text="Z", width=3, height=1, command=lambda: game_update("Z"))
     button_Z.place(x=60, y=460)
 
-    global img
-    img = Image.open(image_path[tries])
-    img = img.resize((200, 200), Image.ANTIALIAS)
-    img = ImageTk.PhotoImage(img)
-    global panel
-    panel = Label(win, image=img)
-    panel.place(x=0, y=100)
+    try:
+        global img
+        img = Image.open(image_path[tries])
+        img = img.resize((200, 200), Image.ANTIALIAS)
+        img = ImageTk.PhotoImage(img)
+        global panel
+        panel = Label(win, image = img)
+        panel.place(x = 0, y = 100)
+    except FileNotFoundError as msg:
+        print(msg)
 
 #Updates Game when button is pressed.
 def game_update(guess):
