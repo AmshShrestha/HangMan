@@ -71,7 +71,7 @@ def update():
             password = :password,
             phone = :phone,
             WHERE oid = :oid """,
-              { 'username':user_editor.get(),
+              {'username':user_editor.get(),
                 'mail':mail_editor.get(),
                 'password': password_editor.get(),
                 'phone':phone_editor.get(),
@@ -129,9 +129,9 @@ def edit():
     edit_button = Button(editor,text = "SAVE",command=update)
     edit_button.grid(row=5,column=0, columnspan=2, pady=10, padx=10, ipadx=70)
 
-
 delete_box = Entry(root,width=30)
 delete_box.grid(row=7,column=1)
+
 
 
 add_record_button = Button(root,text="Add Record",command=submit,bg = 'Wheat1')
@@ -146,3 +146,4 @@ delete_box_button.grid(row=8,column=0,columnspan=2,padx=30,pady=10,ipadx=70)
 update_button = Button(root,text="UPDATE",command=edit,bg = 'Wheat1')
 update_button.grid(row=9,column=0,columnspan=2,padx=30,pady=10,ipadx=70)
 root.mainloop()
+
