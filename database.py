@@ -129,25 +129,9 @@ def edit():
     edit_button = Button(editor,text = "SAVE",command=update)
     edit_button.grid(row=5,column=0, columnspan=2, pady=10, padx=10, ipadx=70)
 
-username_entry = Entry(root,width=30)
-username_entry.grid(row=0,column=1)
-mail_entry = Entry(root,width=30)
-mail_entry.grid(row=1,column=1)
-password_entry = Entry(root,width=30)
-password_entry.grid(row=2,column=1)
-phone_number_entry = Entry(root,width=30)
-phone_number_entry.grid(row=3,column=1)
+
 delete_box = Entry(root,width=30)
 delete_box.grid(row=7,column=1)
-
-username_Label = Label(root,text="Username",bg = 'Snow1')
-username_Label.grid(row=0,column=0)
-mail_Label = Label(root,text="mail",bg = 'snow1')
-mail_Label.grid(row=1, column=0)
-password_Label = Label(root,text="password",bg = 'snow1')
-password_Label.grid(row=2,column=0)
-phone_number_label = Label(root,text="phone number",bg = 'snow1')
-phone_number_label.grid(row=3,column=0)
 
 
 add_record_button = Button(root,text="Add Record",command=submit,bg = 'Wheat1')
